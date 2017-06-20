@@ -1,0 +1,122 @@
+body{
+	font-size:15px;
+	font-family: Roboto;
+	padding: 0; margin: 0;
+	background: #fff;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.header{
+	background: linear-gradient(225deg, rgba(164,97,243,0.9) 0, rgba(46,149,187,0.9) 64.39%, rgba(63,139,216,0.9) 100%);
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	color: #2C74D4;
+	letter-spacing: 0;
+
+	line-height: 33px;
+	padding: 14px 20px;
+	border-bottom: 1px solid #DFDFDF;
+	margin: 0;
+}
+.header .docs{
+	float:right;
+	color: rgba(255,255,255,.7);
+    font-size: 14px;
+    font-weight: 500;
+}
+.header .docs:hover{
+	color: white;
+}
+.webix-logo{
+	width: 80px;
+	height: 36px;
+	display: block;
+	float:left; margin-right: 20px;
+	fill: #fff;
+    width: 76px;
+    background: url(/assets/logo.png);
+    background-position: 0px 0px;
+    margin-top: -9px;
+    height: 50px;
+}
+
+h1 a , h1 a:visited {
+	color: white;
+	text-decoration: none;
+}
+.mainarea{
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	grid-gap: 1px;
+}
+
+ul.left {
+	width: 100%; margin: 0; padding:18px 0 0 0px;
+	overflow: hidden;
+	list-style-type: none;
+
+	background: #FFFFFF;
+	border-right: 1px solid #DFDFDF;
+
+	font-family: "Roboto";
+	letter-spacing: 0;
+	line-height: 16px;
+}
+ul.left > li {
+	line-height: 1.8rem;
+	padding: 0 0.5rem 0.8rem 0;
+}
+ul.left > li span{
+	font-size: 14px;
+	padding-left: 35px;
+	color: #464646;	
+	font-weight: 500;
+	text-transform: uppercase;
+}
+ul.left li ul {
+	margin: 0; padding:0px 0 0 0px;
+	list-style-type: none;
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: none;
+}
+ul.left li ul li{
+	padding-left: 31px;
+	border-left:5px solid #fff;
+}
+ul.left li ul li.selected{
+	color: #2095F3;
+	border-left:5px solid #2095F3;
+}
+ul.left li ul li.selected a{
+	color: #2095F3;	
+}
+ul.left a, ul.left a:visited{
+	color: #7F7F7F;
+	text-decoration: none;
+}
+ul.left a:hover{
+	color: #2095F3;
+	text-decoration: none;
+}
+.right{
+	padding: 20px 20px;
+	background: #f3f3f3;
+}
+strong, .webix_strong{
+	font-weight: 500 !important;
+	color: #222;
+}
+.lbutton{
+	width: 200px;
+	height: 30px; line-height: 30px;
+}
+.mainarea{
+	min-height: 1200px;
+}
+a, a:visited{
+	color: #2095F3;
+}
