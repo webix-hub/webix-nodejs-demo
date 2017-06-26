@@ -52,6 +52,9 @@ sequelize.sync({ force: true }).then(() => {
   Document.create({ userId:3, name:"pic001550.jpg" });
   Document.create({ userId:3, name:"pic001551.jpg" });
 
+  for (var i=1000; i<2000; i++)
+    Document.create({ userId:2, name:"photo"+i+".jpg" });
+
 });
 
 module.exports = {

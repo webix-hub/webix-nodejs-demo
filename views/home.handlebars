@@ -1,36 +1,23 @@
-<script>
-webix.ready(function(){
+<h3>Hi!</h3>
 
-	var grid = {
-		id:"grid",
-		view:"datatable", select:"row",
-		columns:[
-			{ id:"name", header:"Name", editor:"text", fillspace:1 },
-			{ id:"year", editor:"text" },
-			{ id:"status", editor:"select", options:["", "Active", "Closed"] },
-		],
-		editable:true, editaction:"dblclick",
-		url:"/data",
-		save:"rest->/data"
-	};
+<p>This packages shows how Webix can be used with NodeJS backend.</p>
+<p>There are 3 major cases:
 
-	function add_row(){
-		$$("grid").add({ name:"New item"});
-	}
-	function delete_row(){
-		$$("grid").remove( $$("grid").getSelectedId(true) );
-	}
+<ul>
+<li>Loading data into data components (list, datatable, chart, etc. )</li>
+<li>Loading data in hierarchical components (tree, treetable, etc.)</li>
+<li>Working with form</li>
+</ul>
 
-	webix.ui({
-		rows:[
-			{ view:"toolbar", elements:[
-				{ view:"button", value:"Add row", click:add_row },
-				{ view:"button", value:"Delete row", click:delete_row },
-				{ gravity:2}
-			]},
-			grid
-		]
-	});
+<p>For data loading server must provide a GET handler which returns a collection of JSON objects (a single JSON object in case of the form )</p>
+<p>For data saving, common REST pattern is used. Rest handlers must return a valid JSON object with optional ID value.</p>
 
-})
-</script>
+<h4>Check also</h4>
+
+<ul>
+<li><a href='//github.com/webix-hub/webix-php-lumen-demo'>PHP (Lumen | Laravel) samples</a></li>
+<li><a href='//github.com/webix-hub/webix-netmvc-demo'>.Net MVC samples</a></li>
+</ul>
+
+<br><br><hr>
+@ XB Software 2017, MIT license.

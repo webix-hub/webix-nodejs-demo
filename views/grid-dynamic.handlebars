@@ -1,0 +1,24 @@
+<p>For big dataset, dynamic data loading can be used. In this mode datatable will load only part of data initially and will send extra requests during data scrolling</p>
+<p>Server side sorting and filtering are essential for dynamic data loading ( can be used in case of normal data loading as well ) </p>
+<div id='grid-container'></div>
+<script>
+
+var grid = {
+	view:"datatable", id:"grid", select:true,
+	height: 600, autowidth:true, 
+	editable:true,
+	columns:[
+		{ id:"id" },
+		{ id:"name", header:["File Name", { content:"serverFilter"}], sort:"server", width: 200 }
+	],
+	url:"/grid/data-dynamic"
+};
+
+webix.ui({
+	type:"space",
+	container:"grid-container",
+	rows:[
+		grid
+	]
+});
+</script>
