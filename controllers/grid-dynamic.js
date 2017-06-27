@@ -5,7 +5,6 @@ module.exports = {
 		var limit = (req.query.count || 20)*1;
 		var offset = (req.query.start || 0)*1;
 
-console.log(req.query)
 		var where = req.query.filter ? { name:{ $like:"%"+req.query.filter.name+"%" }}: {};
 		var order = req.query.sort ? [["name", req.query.sort.name ]] : [];
 
