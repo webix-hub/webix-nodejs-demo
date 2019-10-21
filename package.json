@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/webix-hub/webix-nodejs-demo",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "~3.5.1",
-    "express-handlebars": "^3.0.0",
-    "formidable": "^1.1.1",
-    "mongoskin": "~1.3.20",
-    "mysql2": "^1.3.5",
-    "sequelize": "^4.1.0"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "formidable": "^1.2.1",
+    "mongoskin": "^2.1.0",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.21.1"
   }
 }

@@ -3,10 +3,10 @@ var db = require('../db');
 
 module.exports = {
 	getData: function(req, res){
-		db.User.findById(req.params.recordId).then(data => res.json(data));
+		db.User.findByPk(req.params.recordId).then(data => res.json(data));
 	},
 	saveData: function(req, res){
-		db.User.findById(req.body.id)
+		db.User.findByPk(req.body.id)
 			.then((user) => 
 				user.update({
 					name: 		req.body.name,

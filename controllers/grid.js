@@ -7,7 +7,7 @@ module.exports = {
 
 
 	removeData: function(req, res){
-		db.User.findById(req.params.userId)
+		db.User.findByPk(req.params.userId)
 			.then((user) => 
 				user.destroy())
 			.then(() => 
@@ -15,15 +15,31 @@ module.exports = {
 	},
 
 	addData: function(req, res){
+		const data = req.body;
+		// force null values
+		if (!data.birthday)
+			data.birthday = null;
+		if (!data.group_id)
+			data.group_id = null;
+		if (!data.age)
+			data.age = 0;
+
 		db.User.create(req.body).then((obj) => 
 				res.json({ id: obj.id }));
 	},
 	updateData: function(req, res){
-		var { username, email, name, birthday, age, group_id } = req.body;
-		console.log(username, birthday)
-		db.User.findById(req.params.userId)
+		const data = req.body;
+		// force null values
+		if (!data.birthday)
+			data.birthday = null;
+		if (!data.group_id)
+			data.group_id = null;
+		if (!data.age)
+			data.age = 0;
+
+		db.User.findByPk(req.params.userId)
 			.then((user) => 
-				user.update(req.body))
+				user.update(data))
 			.then(() => 
 				res.json({}));
 	}
